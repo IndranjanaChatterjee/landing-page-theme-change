@@ -4,9 +4,10 @@
     box-sizing: border-box;
 }
 body{
-    background: linear-gradient(to bottom right,#f892c4,#f9a7b7,#fac6a4);
+    
     background-repeat: no-repeat;
     min-height: 100vh;
+    overflow: hidden;
 }
 header nav{
     
@@ -17,7 +18,7 @@ header nav{
     
 }
 header nav span{
-    color:#ffffff;
+    
     font-weight: 600;
 }
 ul{
@@ -26,17 +27,19 @@ ul{
 ul li{
     list-style:none ;
     margin: 0rem 2rem;
-    color: #766365;
+    
 }
+
+
 section{
-    height: calc(100vh - 70px);
+    height: calc(100vh - 60px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
 }
 section .txt{
-    color:#fef3f7;
+    color:#766365;
     font-size:5rem ;
 }
 .img,.txt{
@@ -55,4 +58,76 @@ section .txt{
     height:100%;
     
     
+}
+.txt button{
+    margin:1.5rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+    background-color:#f9a7b7 ;
+    border: 3px solid white;
+    color:white;
+}
+.txt button:hover{
+    color:rgb(222, 103, 123);
+    background-color: white;
+    border: 3px solid rgb(234, 101, 124);
+    cursor: pointer;
+    
+}
+ul li:hover{
+    
+    font-weight: 600;
+    cursor: pointer;
+}
+@media (prefers-color-scheme:dark)
+{
+    li:nth-child(4)
+    {
+        color:#766365;
+    }
+    li:nth-child(4):hover{
+        color: white;
+    }
+    body{
+        background: linear-gradient(to bottom right,blue,rgb(108, 108, 202),rgb(139, 139, 174));
+    }
+    ul li{
+        color:white;
+    }
+    header nav span{
+        color: white;
+    }
+    h1{
+        color: white;
+    }
+    .txt button{
+        background-color: blue;
+    }
+    
+}
+@media (prefers-color-scheme:light)
+{
+    li:nth-child(4)
+    {
+        color:white;
+    }
+    li:nth-child(4):hover{
+        color:#766365;
+    }
+    body{
+        background: linear-gradient(to bottom right,#f892c4,#f9a7b7,#fac6a4);
+
+    }
+    ul li{
+        color:#766365;
+    }
+    header nav span{
+        color: #766365;
+    }
+    h1{
+        color: #766365;
+    }
+    .txt button{
+        background-color: #f9a7b7;
+    }
 }
