@@ -1,11 +1,11 @@
 
-let logo = document.getElementById("logo");
+let logo = document.getElementById("logoo");
 let theme = document.getElementById("theme");
 let h1=document.getElementById("h1");
 let li=document.querySelectorAll(".li");
 let btn=document.getElementById("click");
 let result = window.matchMedia("(prefers-color-scheme:dark)");
-let write=document.getElementById("p");
+let write=document.querySelector(".content");
 let value=result.matches;
 theme.addEventListener("click", () => {
     
@@ -59,7 +59,7 @@ window.addEventListener("scroll",()=>
 
 {
     let y=window.scrollY;
-    console.log(y);
+    //console.log(y);
     img.style.left=`${100-y}px`;
     img2.style.right=`${100-y}px`;
     img7.style.left=`${100-y}px`;

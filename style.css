@@ -58,7 +58,7 @@ section{
     align-items: center;
     padding: 1rem;
 }
-section .txt{
+#f .txt{
     color:#766365;
     font-size:5rem ;
 }
@@ -112,6 +112,8 @@ h1{
 .pic2{
     top:4rem;
     right: 5rem;
+    width: 20%;
+    height: 20%;
 }
 .pic3{
     top:10rem;
@@ -126,7 +128,7 @@ h1{
 .pic5{
     bottom: 0rem;
     right:20rem;
-    width: 35%;
+    width: 45%;
     height: 40%;
 }
 .pic6{
@@ -141,7 +143,7 @@ h1{
     height: 30%;
     width: 15%;
 }
-.writing p{
+.content {
     padding: 1.5rem;
     font-size: 1.5rem;
     
@@ -182,7 +184,7 @@ h1{
         font-weight: 600;
         cursor: pointer;
     }
-    .writing p {
+    .content  {
         color: white;
     }
 }
@@ -224,7 +226,7 @@ h1{
         font-weight: 600;
         cursor: pointer;
     }
-    .writing p{
+    .content {
         color:#766365;
     }
 }
