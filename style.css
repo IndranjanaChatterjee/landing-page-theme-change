@@ -7,7 +7,8 @@ body{
     
     background-repeat: no-repeat;
     min-height: 100vh;
-    overflow: hidden;
+    position: relative;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 header nav{
     
@@ -15,6 +16,23 @@ header nav{
     justify-content: space-between;
     padding:1rem ;
     font-size: 2rem;
+    
+}
+header nav .top{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:2rem;
+}
+header nav .top img{
+    height: 80%;
+    width: 10%;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+header nav .top img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
     
 }
 header nav span{
@@ -66,18 +84,59 @@ section .txt{
     background-color:#f9a7b7 ;
     border: 3px solid white;
     color:white;
+    border-radius: 3rem;
 }
-.txt button:hover{
-    color:rgb(222, 103, 123);
-    background-color: white;
-    border: 3px solid rgb(234, 101, 124);
-    cursor: pointer;
+
+
+h1{
+    text-align: center;
+    text-shadow:7px  7px 20px #f2eded;
     
 }
-ul li:hover{
+.pic1,.pic2,.pic3,.pic4,.pic5,.pic6,.pic7{
+    position: absolute;
+    width: 10%;
+    height: 20%;
+    z-index: -999;
     
-    font-weight: 600;
-    cursor: pointer;
+}
+.pic1{
+    top:5rem;
+    left:10rem;
+    
+
+}
+.pic2{
+    top:4rem;
+    right: 5rem;
+}
+.pic3{
+    top:10rem;
+    right:0rem;
+    width: 20%;
+    height: 30%;
+}
+.pic4{
+    left:5rem;
+    bottom: 0rem;
+}
+.pic5{
+    bottom: 0rem;
+    left:20rem;
+    width: 35%;
+    height: 40%;
+}
+.pic6{
+    top: 0rem;
+    left:20rem;
+    width: 35%;
+    height: 40%;
+}
+.pic7{
+    top:10rem;
+    left:0rem;
+    height: 50%;
+    width: 15%;
 }
 @media (prefers-color-scheme:dark)
 {
@@ -102,6 +161,18 @@ ul li:hover{
     }
     .txt button{
         background-color: blue;
+    }
+    .txt button:hover{
+        color:rgb(61, 7, 208);
+        background-color: white;
+        border: 3px solid rgb(40, 16, 193);
+        cursor: pointer;
+        
+    }
+    ul li:hover{
+        color:yellow;
+        font-weight: 600;
+        cursor: pointer;
     }
     
 }
@@ -129,5 +200,17 @@ ul li:hover{
     }
     .txt button{
         background-color: #f9a7b7;
+    }
+    .txt button:hover{
+        color:rgb(222, 103, 123);
+        background-color: white;
+        border: 3px solid rgb(234, 101, 124);
+        cursor: pointer;
+        
+    }
+    ul li:hover{
+        color:blue;
+        font-weight: 600;
+        cursor: pointer;
     }
 }

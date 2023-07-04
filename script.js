@@ -4,9 +4,11 @@ let theme = document.getElementById("theme");
 let h1=document.getElementById("h1");
 let li=document.querySelectorAll(".li");
 let btn=document.getElementById("click");
+let result = window.matchMedia("(prefers-color-scheme:dark)");
+let value=result.matches;
 theme.addEventListener("click", () => {
-    let result = window.matchMedia("(prefers-color-scheme:dark)");
-    if (!result.matches) {
+    
+    if (!value) {
         logo.style.color="white";
         h1.style.color="white";
         li.forEach(e => {
@@ -16,6 +18,8 @@ theme.addEventListener("click", () => {
         document.body.style.background = "linear-gradient(to bottom right,blue,rgb(108, 108, 202),rgb(139, 139, 174))";
         click.style.background="blue";
         localStorage.setItem('theme', "light");
+        value=true;
+        theme.style.color="white";
         
         
 
@@ -32,6 +36,9 @@ theme.addEventListener("click", () => {
         localStorage.setItem('theme', "dark");
         console.log(result.matches);
         click.style.background="#f9a7b7";
+        value=false;
+        theme.style.color="#766365";
+        
         
         
         
