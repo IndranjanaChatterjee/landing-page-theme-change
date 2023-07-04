@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     
@@ -9,6 +10,7 @@ body{
     min-height: 100vh;
     position: relative;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
 }
 header nav{
     
@@ -98,6 +100,7 @@ h1{
     width: 10%;
     height: 20%;
     z-index: -999;
+    transition: all 0.3s linear;
     
 }
 .pic1{
@@ -122,21 +125,26 @@ h1{
 }
 .pic5{
     bottom: 0rem;
-    left:20rem;
+    right:20rem;
     width: 35%;
     height: 40%;
 }
 .pic6{
     top: 0rem;
-    left:20rem;
-    width: 35%;
-    height: 40%;
+    left:25rem;
+    width: 30%;
+    height: 30%;
 }
 .pic7{
-    top:10rem;
+    top:20rem;
     left:0rem;
-    height: 50%;
+    height: 30%;
     width: 15%;
+}
+.writing p{
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    
 }
 @media (prefers-color-scheme:dark)
 {
@@ -174,8 +182,11 @@ h1{
         font-weight: 600;
         cursor: pointer;
     }
-    
+    .writing p {
+        color: white;
+    }
 }
+
 @media (prefers-color-scheme:light)
 {
     li:nth-child(4)
@@ -212,5 +223,8 @@ h1{
         color:blue;
         font-weight: 600;
         cursor: pointer;
+    }
+    .writing p{
+        color:#766365;
     }
 }

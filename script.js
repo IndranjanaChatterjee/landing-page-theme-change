@@ -5,6 +5,7 @@ let h1=document.getElementById("h1");
 let li=document.querySelectorAll(".li");
 let btn=document.getElementById("click");
 let result = window.matchMedia("(prefers-color-scheme:dark)");
+let write=document.getElementById("p");
 let value=result.matches;
 theme.addEventListener("click", () => {
     
@@ -20,6 +21,7 @@ theme.addEventListener("click", () => {
         localStorage.setItem('theme', "light");
         value=true;
         theme.style.color="white";
+        write.style.color="white";
         
         
 
@@ -38,7 +40,7 @@ theme.addEventListener("click", () => {
         click.style.background="#f9a7b7";
         value=false;
         theme.style.color="#766365";
-        
+        write.style.color="#766365";
         
         
         
@@ -46,4 +48,22 @@ theme.addEventListener("click", () => {
     }
     console.log(result.matches);
 
+})
+const img=document.querySelector(".pic1");
+const img2=document.querySelector(".pic2");
+const img7=document.querySelector(".pic7");
+const img6=document.querySelector(".pic6");
+const img4=document.querySelector(".pic4");
+const img5=document.querySelector(".pic5");
+window.addEventListener("scroll",()=>
+
+{
+    let y=window.scrollY;
+    console.log(y);
+    img.style.left=`${100-y}px`;
+    img2.style.right=`${100-y}px`;
+    img7.style.left=`${100-y}px`;
+    img6.style.top=`${100-y}px`;
+    img4.style.left=`${y-400}px`;
+    img5.style.right=`${y-400}px`;
 })
